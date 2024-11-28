@@ -1,0 +1,130 @@
+body {
+    padding-top: 60px;
+    background-image: url("../images/index/beijingtupian.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/* 图片列表 */
+.image_list {
+    margin: 30px auto 0;
+    width: 80%;
+    height: calc(100vh - 160px);
+}
+
+.image_list ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.image_list ul li {
+    width: 11%;
+    height: 90%;
+    border-radius: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.image_list ul li:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.image_list ul li:nth-of-type(1) {
+    background-image: url("../images/index/datiehua.jpg");
+}
+
+.image_list ul li:nth-of-type(2) {
+    background-image: url("../images/index/jisi.png");
+}
+
+.image_list ul li:nth-of-type(3) {
+    background-image: url("../images/index/jieqi.png");
+}
+
+.image_list ul li:nth-of-type(4) {
+    background-image: url("../images/index/jingju.jpg");
+}
+
+.image_list ul li:nth-of-type(5) {
+    background-image: url("../images/index/wulong.jpg");
+}
+
+.image_list ul li:nth-of-type(6) {
+    background-image: url("../images/index/piying.png");
+}
+
+.image_list ul li:nth-of-type(7) {
+    background-image: url("../images/index/tiyu.png");
+}
+
+.image_list ul li:nth-of-type(8) {
+    background-image: url("../images/index/miaohui.png");
+}
+
+.image_list ul li {
+    position: relative;
+}
+
+.image_list ul li a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 音乐控制按钮 */
+.music-control {
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    z-index: 1000;
+}
+
+.music-control button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffd700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.music-control button:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.music-control i {
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+/* 播放状态的动画 */
+.music-control i.playing {
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
