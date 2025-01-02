@@ -3,10 +3,13 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>个人主页 - 非遗知多少</title>
-    <link rel="stylesheet" href="css/header-footer.css">
-    <link rel="stylesheet" href="css/user.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <title>个人主页 - 非遗知多少</title>
+        <link rel="stylesheet" href="css/header-footer.css">
+        <link rel="stylesheet" href="css/user.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 </head>
 
 <body>
@@ -88,6 +91,30 @@
             </div>
         </div>
     </div>
+	  <script>
+	    $(document).ready(function() {
+	        $(".edit-profile").click(function(event) {
+	            event.preventDefault();
+	            // alert("点击了编辑资料按钮！"); // 显示一个基本的JavaScript提示框
+	 
+	            $( "<div>你确定要编辑资料吗？</div>" ).dialog({
+	                resizable: false,
+	                height: "auto",
+	                width: 400,
+	                modal: true,
+	                buttons: {
+	                    "确定": function() {
+	                        $( this ).dialog( "close" );
+	                        // 这里可以添加编辑资料的逻辑
+	                    },
+	                    "取消": function() {
+	                        $( this ).dialog( "close" );
+	                    }
+	                }
+	            });
+	        });
+	    });
+	    </script>
 </body>
 
-</html> 
+</html>
